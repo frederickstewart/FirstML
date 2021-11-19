@@ -16,7 +16,7 @@
     <PackageReference Include="RestSharp" Version="106.13.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Data\housing.csv">
+    <None Update="housing.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
