@@ -43,7 +43,7 @@ namespace FirstML
             public float Median_house_value { get; set; }
 
             [ColumnName(@"ocean_proximity")]
-            public string Ocean_proximity { get; set; }
+            public string Ocean_proximity { get; set; } = string.Empty;
 
         }
 

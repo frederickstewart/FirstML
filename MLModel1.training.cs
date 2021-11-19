@@ -32,7 +32,7 @@ namespace FirstML
             var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"ocean_proximity", @"ocean_proximity")      
                                     .Append(mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"longitude", @"longitude"),new InputOutputColumnPair(@"latitude", @"latitude"),new InputOutputColumnPair(@"housing_median_age", @"housing_median_age"),new InputOutputColumnPair(@"total_rooms", @"total_rooms"),new InputOutputColumnPair(@"total_bedrooms", @"total_bedrooms"),new InputOutputColumnPair(@"population", @"population"),new InputOutputColumnPair(@"households", @"households"),new InputOutputColumnPair(@"median_income", @"median_income")}))      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"ocean_proximity",@"longitude",@"latitude",@"housing_median_age",@"total_rooms",@"total_bedrooms",@"population",@"households",@"median_income"}))      
-                                    .Append(mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options(){NumberOfLeaves=22,MinimumExampleCountPerLeaf=8,NumberOfTrees=20640,MaximumBinCountPerFeature=1024,LearningRate=0.00278734711214791F,FeatureFraction=1F,LabelColumnName=@"median_house_value",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options(){NumberOfLeaves=985,MinimumExampleCountPerLeaf=2,NumberOfTrees=896,MaximumBinCountPerFeature=8,LearningRate=1F,FeatureFraction=0.552906782520357F,LabelColumnName=@"median_house_value",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }
